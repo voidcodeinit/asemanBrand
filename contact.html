@@ -1,0 +1,410 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.rtl.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+     <!-- CSS Style -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Last Project Of Class</title>
+  </head>
+  <body>
+     <!-- Navbar-->
+    <div class="container-fluid bg-primary border-bottom border-light border-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-lg bg-primary">
+              <div class="container-fluid">
+                <a class="navbar-brand text-white" href="#">آسمان</a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarScroll"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                  <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link active text-white"
+                        aria-current="page"
+                        href="index.html"
+                        >خانه</a
+                      >
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle text-white"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                      >
+                        نمونه کارها
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="portfolio.html"
+                            >ساختمان های دولتی</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="portfolio.html"
+                            >مسکن مهر</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="portfolio.html"
+                            >مسکن ملی</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="about.html"
+                        >درباره ما</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="contact.html"
+                        >تماس با ما</a
+                      >
+                    </li>
+                  </ul>
+                  <form class="d-flex" role="search">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="چیزی بنویسید..."
+                    />
+                    <button class="btn btn-warning" type="submit">جستجو</button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- Contact Us Form-->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="mt-5">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">خانه</a></li>
+              <li class="breadcrumb-item active">تماس با ما</li>
+            </ol>
+          </nav>
+          <div class="shadow mb-5 p-4">
+            <h1 class="fs-3">راه های ارتباطی با شرکت آسمان</h1>
+            <hr />
+            <div class="row">
+              <div class="col-12 col-lg-7">
+                <div class="row">
+                  <div class="col-12 col-lg-4">
+                    <p>
+                      رایانامه:
+                      <a class="text-primary" href="mailto:info@laitec.com"
+                        >info@laitec.com</a
+                      >
+                    </p>
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <p>
+                      تلفن 1:
+                      <a class="text-primary" href="tel:09369100696"
+                        >09369100696</a
+                      >
+                    </p>
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <p>
+                      تلفن 2:
+                      <a class="text-primary" href="tel:09127223650"
+                        >09127223650</a
+                      >
+                    </p>
+                  </div>
+                  <div class="col-12 col-lg-12">
+                    <p>
+                      آدرس: تهران . میدان آزادی .بالاتر از خیابان شریف . خیابان
+                      اکبری . پلاک 12 . برج فناوری شریف
+                    </p>
+                  </div>
+                  <div class="col-12 col-lg-12">
+                    <hr />
+                    <form class="mt-4" action="#" method="post">
+                      <div class="row">
+                        <div class="col-12 col-lg-6">
+                          <label>نام و نام خانوادگی</label>
+                          <input type="text" class="form-control mb-3" />
+                        </div>
+                        <div class="col-12 col-lg-6">
+                          <label>آدرس ایمیل</label>
+                          <input type="email" class="form-control mb-3" />
+                        </div>
+                        <div class="col-12 col-lg-6">
+                          <label>شماره تماس</label>
+                          <input type="tel" class="form-control mb-3" />
+                        </div>
+                        <div class="col-12 col-lg-6">
+                          <label>کد ملی</label>
+                          <input type="tel" class="form-control mb-3" />
+                        </div>
+                        <div class="col-12 col-lg-12">
+                          <label>متن درخواست</label>
+                          <textarea
+                            class="form-control mb-3"
+                            rows="4"
+                          ></textarea>
+                        </div>
+                        <div class="col-12 col-lg-12 text-end">
+                          <button class="btn btn-warning btn-sm px-5 py-2">
+                            ارسال
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-5">
+                <div id="map" style="height: 500px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Services -->
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-4">
+          <img
+            src="images/services.avif"
+            alt="services"
+            class="img-fluid pt-5"
+          />
+        </div>
+        <div class="col-12 col-lg-8">
+          <div class="p-5">
+            <h3 class="fs-4">خدمت شماره 1</h3>
+            <hr />
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
+              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
+              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
+              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
+              موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد
+              نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل
+              دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-8 order-2 order-lg-1">
+          <div class="p-5">
+            <h3 class="fs-4">خدمت شماره 1</h3>
+            <hr />
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
+              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
+              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
+              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
+              موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد
+              نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل
+              دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 order-1 order-lg-2">
+          <img
+            src="images/services.avif"
+            alt="services"
+            class="img-fluid pt-5"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Slogan -->
+    <div class="container-fluid parallax">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="d-flex justify-content-center align-items-center inner-parallax"
+            >
+              <h4 class="text-white fs-2 text-center">
+                با ما خانه دار و پولدار شوید
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Services -->
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-4">
+          <img
+            src="images/services.avif"
+            alt="services"
+            class="img-fluid pt-5"
+          />
+        </div>
+        <div class="col-12 col-lg-8">
+          <div class="p-5">
+            <h3 class="fs-4">خدمت شماره 1</h3>
+            <hr />
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
+              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
+              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
+              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
+              موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد
+              نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل
+              دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-8 order-2 order-lg-1">
+          <div class="p-5">
+            <h3 class="fs-4">خدمت شماره 1</h3>
+            <hr />
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
+              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
+              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
+              فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
+              موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد
+              نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل
+              دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 order-1 order-lg-2">
+          <img
+            src="images/services.avif"
+            alt="services"
+            class="img-fluid pt-5"
+          />
+        </div>
+      </div>
+    </div>
+     <!-- Footer -->
+    <div class="container-fluid bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <div class="text-white py-5 px-4">
+              <h5>راه های ارتباطی</h5>
+              <hr />
+              <p>
+                رایانامه:
+                <a class="text-white" href="mailto:info@laitec.com"
+                  >info@laitec.com</a
+                >
+              </p>
+              <p>
+                تلفن 1:
+                <a class="text-white" href="tel:09369100696">09369100696</a>
+              </p>
+              <p>
+                تلفن 2:
+                <a class="text-white" href="tel:09127223650">09127223650</a>
+              </p>
+              <p>
+                شماره پیام گیر:
+                <a class="text-white" href="sms:09369100696">09369100696</a>
+              </p>
+              <p>
+                آدرس: تهران . میدان آزادی .بالاتر از خیابان شریف . خیابان اکبری
+                . پلاک 12 . برج فناوری شریف
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="text-white py-5 px-4">
+              <h5>لینک ها</h5>
+              <hr />
+              <ul class="list-unstyled">
+                <li><a class="text-white" href="index.html">صفحه اصلی</a></li>
+                <li>
+                  <a class="text-white" href="portfolio.html">نمونه کارها</a>
+                </li>
+                <li>
+                  <a class="text-white" href="portfolio.html"
+                    >ساختمان های دولتی</a
+                  >
+                </li>
+                <li>
+                  <a class="text-white" href="portfolio.html">مسکن مهر</a>
+                </li>
+                <li>
+                  <a class="text-white" href="portfolio.html">مسکن ملی</a>
+                </li>
+                <li><a class="text-white" href="about.html">درباره ما</a></li>
+                <li>
+                  <a class="text-white" href="contact.html">تماس با ما</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="text-white py-5 px-4">
+              <h5>خبرنامه</h5>
+              <hr />
+              <label
+                >با عضویت در خبرنامه وب سایت , از آخرین اخبار ما در ایمیلتان
+                مطلع شوید</label
+              >
+              <input
+                type="text"
+                class="form-control mt-4 ltr"
+                placeholder="ex: info@test.com"
+              />
+              <p class="text-end mt-3">
+                <button class="btn btn-warning btn-sm px-5 py-2">عضویت</button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/jquery.js"></script>
+    <script src="./scripts/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

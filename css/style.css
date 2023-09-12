@@ -1,0 +1,64 @@
+@font-face {
+    font-family: vms;
+    src: url('../webfonts/Vazirmatn-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+a{
+    text-decoration: none !important;
+}
+.ltr{
+    direction: ltr;
+}
+.rtl{
+    direction: rtl;
+}
+body{
+    font-family: vms,tahoma,sans-serif;
+    font-size: 14px;
+    direction: rtl;
+    line-height: 28px;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+.bx-wrapper{
+    border: none;
+}
+.parallax{
+    height: 200px;
+    background-image: url(../images/parallax.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.parallax h4{
+    text-shadow: 0 0 4px #000;
+}
+.inner-parallax{
+    height: 200px;
+}
+.card button:hover{
+    background-color: #ffc107;
+    border: 1px solid #ffc107;
+}
+
+@media all and (min-width:992px){
+    .new-products{
+        margin-top: -100px;
+        position: relative;
+        z-index:2;
+    }
+    .inner-new-products img{
+        filter:grayscale(100%);
+        transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+    }
+    .inner-new-products:hover img{
+        filter: grayscale(0);
+    }
+}
